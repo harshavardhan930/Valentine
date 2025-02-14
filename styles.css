@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffecf2;
+    color: #d63384;
+    padding: 20px;
+}
+
+/* Initial Gift Screen */
+#gift-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#gift-box {
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#gift-box:hover {
+    transform: scale(1.1);
+}
+
+/* Hidden Surprise Page */
+.hidden {
+    display: none;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 1s ease, transform 0.5s ease;
+}
+
+.container.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+h1 {
+    color: #ff1493;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.poem {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d63384;
+    margin-top: 20px;
+}
+
+.countdown {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.music {
+    margin-top: 20px;
+}
