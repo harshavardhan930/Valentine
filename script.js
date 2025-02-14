@@ -9,22 +9,12 @@ document.getElementById("gift-box").addEventListener("click", function() {
     }, 100);
 });
 
-// Countdown Timer to a special date
-function countdownTimer() {
-    const eventDate = new Date("2025-02-14T00:00:00").getTime(); // Change to your special date
-    const now = new Date().getTime();
-    const timeLeft = eventDate - now;
+// Play Song and Show Telugu Poem
+document.getElementById("play-song").addEventListener("click", function() {
+    document.getElementById("hidden-poem").style.display = "block"; // Show Poem
+    document.getElementById("song").play(); // Play Song
 
-    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-    document.getElementById("countdown").innerHTML = `${days} days, ${hours} hrs, ${minutes} mins, ${seconds} secs`;
-
-    if (timeLeft < 0) {
-        document.getElementById("countdown").innerHTML = "The special moment is here! 🎉";
-    }
-}
-
-setInterval(countdownTimer, 1000);
+    // Disable Button After Clicking
+    this.disabled = true;
+    this.innerText = "🎶 Playing... 🎶";
+});
